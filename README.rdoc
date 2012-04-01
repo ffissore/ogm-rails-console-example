@@ -13,4 +13,8 @@ During the demo, I've changed the database name. Try running these lines to disc
   ActiveRecord::Base.connection_config
   ActiveRecord::Base.connection_pool.disconnect!
 
+The console can even be accessed directly from bash, through curl
+
+  curl -X POST -d 'script=ActiveRecord::Base.connection_config' http://localhost:3000/console.text
+
 To use rack-webconsole, switch to webconsole branch (<tt>git checkout webconsole</tt>), then at page http://localhost:3000/helloworlds press the ` char
