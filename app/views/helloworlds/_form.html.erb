@@ -1,0 +1,21 @@
+<%= form_for(@helloworld) do |f| %>
+  <% if @helloworld.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@helloworld.errors.count, "error") %> prohibited this helloworld from being saved:</h2>
+
+      <ul>
+      <% @helloworld.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sayhello %><br />
+    <%= f.text_field :sayhello %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

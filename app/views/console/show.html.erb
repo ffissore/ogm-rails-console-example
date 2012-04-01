@@ -1,0 +1,9 @@
+<form action="" method="post">
+  <textarea name="script" rows="20" cols="120"><%= params[:script] %></textarea>
+  <input type="submit"/>
+  <br/>
+  Output: (@ <%= Time.now.strftime("%H:%M:%S") %>)
+  <pre>
+<%= params[:output] %>
+  </pre>
+</form>

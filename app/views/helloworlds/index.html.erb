@@ -1,0 +1,23 @@
+<h1>Listing helloworlds</h1>
+
+<table>
+  <tr>
+    <th>Sayhello</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @helloworlds.each do |helloworld| %>
+  <tr>
+    <td><%= helloworld.sayhello %></td>
+    <td><%= link_to 'Show', helloworld %></td>
+    <td><%= link_to 'Edit', edit_helloworld_path(helloworld) %></td>
+    <td><%= link_to 'Destroy', helloworld, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Helloworld', new_helloworld_path %>
