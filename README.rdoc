@@ -4,14 +4,13 @@ This is the ruby on rails version.
 
 You can use to debug or change the state of your app.
 
-To run it, set ruby up (see https://rvm.beginrescueend.com/), launch +rake db:migrate+ then +rails s+
+To run it, set ruby up (see https://rvm.beginrescueend.com/), launch <tt>rake db:migrate</tt> then <tt>rails s</tt>
 
 Then go to http://localhost:3000/console and start scripting.
 
 During the demo, I've changed the database name. Try running these lines to discover how
 
-<code>ActiveRecord::Base.connection_config
+  ActiveRecord::Base.connection_config
+  ActiveRecord::Base.connection_pool.disconnect!
 
-ActiveRecord::Base.connection_pool.disconnect!</code>
-
-To use rack-webconsole, switch to webconsole branch (+git checkout webconsole+), then at page http://localhost:3000/helloworlds press the ` char
+To use rack-webconsole, switch to webconsole branch (<tt>git checkout webconsole</tt>), then at page http://localhost:3000/helloworlds press the ` char
