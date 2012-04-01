@@ -1,17 +1,16 @@
 == One console to rule the webapp
 
-This is the ruby on rails version
+This is the ruby on rails version.
+
 You can use to debug or change the state of your app.
 
 To run it, set ruby up (see https://rvm.beginrescueend.com/), launch rake db:migrate then rails s
 
-Then go to 
-http://localhost:3000/console
-and start scripting.
+Then go to http://localhost:3000/console and start scripting.
 
 During the demo, I've changed the database name. Try running these lines to discover how
 
-ActiveRecord::Base.connection_config
-ActiveRecord::Base.connection_pool.disconnect!
+<code>ActiveRecord::Base.connection_config
+ActiveRecord::Base.connection_pool.disconnect!</code>
 
 To use rack-webconsole, switch to webconsole branch (git checkout webconsole), then at page http://localhost:3000/helloworlds press the ` char
